@@ -11,6 +11,12 @@ export class AppComponent {
   post: any;
   phone = '';
   name = '';
+  email = '';
+  idade = '';
+  cidade = '';
+  estado = '';
+  usuario = '';
+  senha = '';
   titleAlert = 'Campo obrigatório!';
   constructor(private fb: FormBuilder) {
 
@@ -26,9 +32,14 @@ export class AppComponent {
     });
 
   }
-
   addPost(post) {
     this.name = post.name;
     this.phone = post.phone;
+    this.email = post.email;
+    this.idade = post.idade;
+    this.cidade = post.cidade;
+    this.estado = post.estado;
+    this.usuario = post.usuario;
+    this.senha = post.senha;
   }
 }
