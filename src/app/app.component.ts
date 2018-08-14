@@ -16,8 +16,8 @@ export class AppComponent {
 
     this.rForm = fb.group({
       'name': [null, Validators.required],
-      'phone': ['Ex:(11)4002-8922', Validators.compose([Validators.required, Validators.minLength(10)])],
-      'email': ['Ex: nome@email.com'],
+      'phone': [null, Validators.compose([Validators.required, Validators.minLength(10)])],
+      'email': [null],
       'idade': [null],
       'cidade': [null],
       'estado': [null],
