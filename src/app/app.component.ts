@@ -11,19 +11,18 @@ export class AppComponent {
   post: any;
   phone = '';
   name = '';
-
+  titleAlert = 'Campo obrigatório!';
   constructor(private fb: FormBuilder) {
 
     this.rForm = fb.group({
       'name': [null, Validators.required],
       'phone': [null, Validators.compose([Validators.required, Validators.minLength(10)])],
-      'email': [null],
+      'email': [null, Validators.required],
       'idade': [null],
-      'cidade': [null],
-      'estado': [null],
-      'usuario': [null],
-      'senha': [null],
-      'validate': ''
+      'cidade': [null, Validators.required],
+      'estado': [null, Validators.required],
+      'usuario': [null, Validators.required],
+      'senha': [null, Validators.compose([Validators.required, Validators.minLength(8)])],
     });
 
   }
